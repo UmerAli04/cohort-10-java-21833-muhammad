@@ -19,11 +19,9 @@ public class UpdateContactRequest {
     @Size(max = 100, message = "Title cannot exceed 100 characters")
     private String title;
 
-    @Valid
-    private List<ContactEmailRequest> emails;
+    private List<@Valid ContactEmailRequest> emails;
 
-    @Valid
-    private List<ContactPhoneRequest> phones;
+    private List<@Valid ContactPhoneRequest> phones;
 
     public UpdateContactRequest() {
     }
