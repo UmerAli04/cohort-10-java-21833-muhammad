@@ -1,5 +1,5 @@
-
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Global Reset */
 * {
@@ -25,4 +25,86 @@ body {
 #root {
   min-height: 100vh;
   width: 100%;
+}
+
+/* Dark Mode - Dashboard Styling */
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Main surfaces */
+.dark .bg-white {
+  background-color: #151f32 !important;
+}
+
+.dark .bg-slate-50,
+.dark .bg-slate-50\/80,
+.dark .bg-slate-50\/70 {
+  background-color: #1e293b !important;
+}
+
+.dark .bg-slate-100 {
+  background-color: #263449 !important;
+}
+
+/* Text colors */
+.dark .text-slate-900,
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+/* Borders */
+.dark .border-slate-200,
+.dark .border-slate-200\/80,
+.dark .border-slate-100 {
+  border-color: #334155 !important;
+}
+
+/* Hover effects */
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-100:hover {
+  background-color: #334155 !important;
+}
+
+/* Dark Mode - Topbar Fix */
+
+.dark header {
+  background-color: rgba(21, 31, 50, 0.95) !important;
+  border-color: #334155 !important;
+}
+
+.dark header .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark header .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.dark header input {
+  color: #f1f5f9 !important;
+}
+
+.dark header input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.dark header .bg-white {
+  background-color: #263449 !important;
+}
+
+.dark header kbd {
+  background-color: #263449 !important;
+  border-color: #475569 !important;
+  color: #cbd5e1 !important;
 }

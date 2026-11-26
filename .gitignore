@@ -47,3 +47,6 @@ frontend/.env.*
 # Logs
 *.log
 npm-debug.log*
+
+# SonarQube local data
+.sonar/
